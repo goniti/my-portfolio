@@ -2310,6 +2310,13 @@
 .fa-meetup:before {
   content: '\f2e0';
 }
+.fa-hero {
+  color: #00cdac;
+  font-size: 3rem;
+}
+.fa-hero:hover {
+  color: #02aab0;
+}
 .sr-only {
   position: absolute;
   width: 1px;

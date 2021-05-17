@@ -1,13 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
-
+  const { title, name, subtitle, cta, resume, networks } = hero;
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -26,7 +24,7 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
+            {title || 'Hi, my name is'} <br />
             <span className="text-color-main">{name || 'Your Name'}</span>
             <br />
             {subtitle || "I'm the Unknown Developer."}
@@ -34,11 +32,30 @@ const Header = () => {
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
-            <span className="cta-btn cta-btn--hero">
-              <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
-              </Link>
-            </span>
+            {resume && (
+              <span className="cta-btn cta-btn--hero">
+                <a target="_blank" rel="noopener noreferrer" href={resume}>
+                  {cta}
+                </a>
+              </span>
+            )}
+            <div className="hero-social">
+              {networks &&
+                networks.map((network) => {
+                  const { id, social, url } = network;
+                  return (
+                    <a
+                      key={id}
+                      href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-label={social}
+                    >
+                      <i className={`fa fa-${social || 'refresh'} fa-hero `} />
+                    </a>
+                  );
+                })}
+            </div>
           </p>
         </Fade>
       </Container>
