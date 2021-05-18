@@ -8,7 +8,7 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { titleSection, img, paragraphOne, paragraphTwo, paragraphThree, cta } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree, cta } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -26,7 +26,7 @@ const About = () => {
   return (
     <section id="about">
       <Container>
-        <Title title={titleSection} />
+        <Title title="À propos de moi" />
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
@@ -38,20 +38,12 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">
-                  {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
-                </p>
+                <p className="about-wrapper__info-text">{paragraphOne}</p>
+                <p className="about-wrapper__info-text">{paragraphTwo}</p>
+                <p className="about-wrapper__info-text">{paragraphThree}</p>
                 <span className="d-flex mt-3">
                   <Link to="contact" smooth duration={1000} className="cta-btn cta-btn--resume">
-                    {cta || 'Know more'}
+                    {cta}
                   </Link>
                 </span>
               </div>

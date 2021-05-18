@@ -35,7 +35,6 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  titleSection: 'À propos de moi',
   img: 'profile.jpg',
   paragraphOne: `Passionné de programmation et ayant pris goût à JavaScript. 
   J'ai commencé à apprendre en autodidacte plusieurs technologies Front-End, 
