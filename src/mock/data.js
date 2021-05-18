@@ -37,12 +37,12 @@ export const heroData = {
 export const aboutData = {
   titleSection: 'À propos de moi',
   img: 'profile.jpg',
-  paragraphOne: `Passionné de programmation et ayant pris goût a JavaScript.
-    j'ai commencé à apprendre en autodidacte plusieurs technologies Front-End,
-    Ensuite, je me suis perfectionné dans des technologies front plus avancée telle que React et Redux.`,
+  paragraphOne: `Passionné de programmation et ayant pris goût à JavaScript. 
+  J'ai commencé à apprendre en autodidacte plusieurs technologies Front-End, 
+  Ensuite, je me suis perfectionné dans des technologies front plus avancées telles que React et Redux.`,
   paragraphTwo: `Afin d'améliorer ma compréhension lors de la communication avec une API 
-    ainsi que l'utilisation d'une base de données, je me suis intéressé au Back-End notamment nodeJS et postgreSQL.`,
-  paragraphThree: `Aujourd'hui encore, je continue de codé et me spécialiser avec React .`,
+  ainsi que l'utilisation d'une base de données, je me suis intéressé au Back-End notamment nodeJS et postgreSQL.`,
+  paragraphThree: `Aujourd'hui encore, je continue de coder et me spécialiser avec React.`,
   cta: 'Faire connaissance',
 };
 
@@ -72,7 +72,7 @@ export const projectsData = [
     img: 'tourist-zone_folder.png',
     title: 'Tourist Zone List',
     info: `Application mobile first avec React et Sass. `,
-    info2: `Développement d'une interface où l'utilisateur peut enregistrer ses prochains lieux a visité, pour cela, il devra créer des zones touristiques, chaque zone contient une liste regroupant jusqu'à trois villes.`,
+    info2: `Développement d'une interface où l'utilisateur peut enregistrer ses prochains endroits à découvrir, pour cela, il devra créer des zones touristiques, chaque zone contient une liste regroupant jusqu'à trois villes.`,
     url: 'http://demo_zonelist.surge.sh',
     repo: 'https://github.com/goniti/touristZoneList', // if no repo, the button will not show up
   },
