@@ -13,7 +13,7 @@ export const heroData = {
   name: 'Carlos Gonzalez  Lo Vullo',
   subtitle: 'Je suis développeur frontend JS. Passionné de programmation',
   cta: 'Mon CV',
-  resume: 'https://www.gonzalezlovullocarlos.fr/sources/CV-CARLOS.pdf', // if no resume, the button will not show up
+  resume: '', // if no resume, the button will not show up
   networks: [
     {
       id: nanoid(),

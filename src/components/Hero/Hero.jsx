@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import PortfolioContext from '../../context/context';
+import CvCarlos from '../../images/CV_Carlos.pdf';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -32,9 +33,9 @@ const Header = () => {
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
-            {resume && (
+            {!resume && (
               <span className="cta-btn cta-btn--hero">
-                <a target="_blank" rel="noopener noreferrer" href={resume}>
+                <a target="_blank" rel="noopener noreferrer" href={CvCarlos}>
                   {cta}
                 </a>
               </span>
