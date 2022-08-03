@@ -25,22 +25,24 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title} <br />
+            {title}
             <span className="text-color-main">{name}</span>
-            <br />
             {subtitle}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-          <p className="hero-cta">
+          <div className="hero-cta">
             {!resume && (
-              <span className="cta-btn cta-btn--hero">
-                <a target="_blank" rel="noopener noreferrer" href={CvCarlos}>
-                  {cta}
-                </a>
-              </span>
+              <a
+                className="cta-btn cta-btn--hero"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={CvCarlos}
+              >
+                {cta}
+              </a>
             )}
-            <span className="hero-social">
+            <div className="hero-social">
               {networks &&
                 networks.map((network) => {
                   const { id, social, url } = network;
@@ -56,8 +58,8 @@ const Header = () => {
                     </a>
                   );
                 })}
-            </span>
-          </p>
+            </div>
+          </div>
         </Fade>
       </Container>
     </section>
